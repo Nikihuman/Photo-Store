@@ -1,0 +1,35 @@
+@import '../../common.module.scss';
+
+
+.auth_layout_wrapper{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	.auth_layout{
+		display: flex;
+		height: min-content;
+		@media screen and (max-width: 720px) {
+			flex-direction: column;
+		}
+	}
+	.text_wrapper{
+		width: 300px;
+		border-top-left-radius: 1rem;
+		border-bottom-left-radius: 1rem;
+		background: linear-gradient(90deg, var(--transparent-primary-color) 47.64%, rgba(104, 35, 56, 0.00) 99%);
+		@include montserratFont(var(--text-primary-color), 1.5rem);
+		h1 {
+			margin: 0.8em;
+		}
+		@media screen and (max-width: 720px) {
+			background: linear-gradient(0deg, var(--transparent-primary-color) 1.64%, rgba(104, 35, 56, 0.00) 99%);
+			width: 350px;
+			border-radius: 0px;
+			h1 {
+				margin: 0 0 0.5em 0.5em;
+			}
+		}
+	}
+}
+

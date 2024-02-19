@@ -1,0 +1,50 @@
+@import '../../common.module.scss';
+
+.main{
+	position: relative;
+	display: flex;
+	.sidebar{
+		position: sticky;
+		top: 0px;
+		z-index: 5;
+	}
+	.body_wrapper{
+		position: relative;
+		right: 0em;
+		top: 0em;
+		width: 90%;
+		margin: 0 2em;
+		transition: right 0.5s, top 0.5s;
+		@media screen and (max-width: 620px) {
+			right: 7em;
+		}
+		@media screen and (max-width: 500px) {
+			margin: 0;
+			right: 9em;
+		}
+	}
+	.sidebar_hidden{
+		right: 4.8em;
+		@media screen and (max-width: 620px) {
+			width: 100%;
+			right: 7em;
+			z-index: 1;
+		}
+		@media screen and (max-width: 500px) {
+			width: 90%;
+			margin: 0;
+			right: 9em;
+		}
+	}
+	.search{
+		position: sticky;
+		top: 0px;
+		right: 0px;
+		z-index: 3;
+	}
+	.search_hidden{
+		top: -4.8em;
+	}
+}
+
+

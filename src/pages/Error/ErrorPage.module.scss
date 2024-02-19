@@ -1,0 +1,36 @@
+@import '../../common.module.scss';
+
+.error_page_wrapper{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.error_page{
+	@include primary-border();
+	padding: 2em;
+	background-color: var(--primary-color);
+	.message{
+		margin: 0 0 2em 0;
+		h1{
+			margin: 0 auto;
+			width: min-content;
+			@include error-text();
+		}
+		span{
+			margin: 0 auto;
+			width: min-content;
+			@include montserratFont(var(--text-primary-color), 1.5em)
+		}
+	}
+	a{
+		@include secondary-border();
+		padding: 8px;
+		text-decoration: none;
+		@include montserratFont(var(--text-primary-color), 1.2em);
+		transition: text-shadow 0.5s;
+		&:hover{
+			text-shadow: 0 0 10px var(--backlight);
+		}
+	}
+}

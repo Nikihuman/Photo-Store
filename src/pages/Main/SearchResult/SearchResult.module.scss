@@ -1,0 +1,31 @@
+@import '../../../common.module.scss';
+.footer{
+	margin: 0 auto;
+	display: flex;
+	gap: 15px;
+	@include montserratFont(var(--text-primary-color), 1.5em);
+	justify-content: center;
+	align-items: center;
+	width: min-content;
+	button:hover{
+		.icon * {
+			fill: var(--text-primary-color);
+			stroke: var(--text-primary-color);
+		}
+	}
+}
+.triangle_icon_left{
+	transform: rotate(270deg);
+}
+.icon *{
+	transition: fill 0.3s, stroke 0.3s;
+}
+.body_wrapper{
+	position: relative;
+}
+.body{
+	margin: 2rem 0;
+}
+
+
+

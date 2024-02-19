@@ -1,0 +1,24 @@
+@import '../../common.module.scss';
+
+.form{
+	width: 400px;
+	padding: 1em;
+	background-color: var(--transparent-primary-color);
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	height: 100%;
+	box-sizing: border-box;
+	@include secondary-border;
+	border: none;
+	@include montserratFont(var(--text-primary-color), 1rem);
+	@media screen and (max-width: 720px) {
+		background: linear-gradient(0deg,rgba(104, 35, 56, 0.00) 1%, var(--transparent-primary-color) 99.64%);
+		width: 350px;
+		border-top-right-radius: 0px;
+		border-top-left-radius: 0px;
+		h1 {
+			margin: 0 0 0.5em 0.5em;
+		}
+	}
+}

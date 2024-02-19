@@ -1,0 +1,27 @@
+@import '../../common.module.scss';
+
+.button{
+	display: flex;
+	background-color: var(--transparent-primary-color);
+	padding: 0.5em ;
+	cursor: pointer;
+	transition: box-shadow 0.5s, color 0.5s, background 0.5s;
+	a{
+		text-decoration: none;
+		@include montserratFont(var(--text-secondary-color), 1em, 600);
+		transition: color 0.5s;
+	}
+	&:hover {
+		color: var(--text-primary-color);
+		@include box-shadow();
+		@include secondary-border();
+		a{
+			color: var(--text-primary-color);
+		}
+	}
+	&:active {
+		background: radial-gradient(circle, rgba(135, 135, 135, 0.56) 0%, rgba(80, 80, 80, 1) 100%);
+	}
+	@include montserratFont(var(--text-secondary-color), 1em, 600);
+	@include primary-border();
+}

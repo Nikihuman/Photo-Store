@@ -1,0 +1,11 @@
+@import '../../../common.module.scss';
+
+.body{
+	margin: 2rem 0;
+}
+
+.message{
+	display: flex;
+	justify-content: center;
+	@include montserratFont(var(--text-primary-color), 3em)
+}
