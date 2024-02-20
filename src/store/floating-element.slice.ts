@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 export interface IControllersState {
-	sideBar: boolean,
-	searchBar: boolean
+   sideBar: boolean;
+   searchBar: boolean;
 }
 
 const initialState: IControllersState = {
@@ -13,12 +13,12 @@ const initialState: IControllersState = {
 const floatingElementSlice = createSlice({
 	name: 'floating',
 	initialState,
-	reducers: (create) =>({
-		sideBarController: create.reducer(state =>{
-			state.sideBar ? state.sideBar = false : state.sideBar = true;
+	reducers: create => ({
+		sideBarController: create.reducer(state => {
+			state.sideBar ? (state.sideBar = false) : (state.sideBar = true);
 		}),
-		searchBarController: create.reducer(state =>{
-			state.searchBar ? state.searchBar = false : state.searchBar = true;
+		searchBarController: create.reducer(state => {
+			state.searchBar ? (state.searchBar = false) : (state.searchBar = true);
 		})
 	}),
 	selectors: {
@@ -26,8 +26,7 @@ const floatingElementSlice = createSlice({
 		searchBar: state => state.sideBar
 	}
 });
-	
 
 export default floatingElementSlice.reducer;
-export const {searchBar, sideBar} = floatingElementSlice.selectors;
+export const { searchBar, sideBar } = floatingElementSlice.selectors;
 export const floatingActions = floatingElementSlice.actions;

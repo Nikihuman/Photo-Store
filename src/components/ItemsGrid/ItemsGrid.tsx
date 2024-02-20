@@ -7,11 +7,10 @@ import { Album } from '../Album/Album';
 import { CollectionList } from '../CollectionList/CollectionList';
 import { ICollectionData } from '../CollectionList/CollectionList.props';
 
-
-export function ItemsGrid ({ data, areaId = '1'}: ItemsGridProps) {
-	if(areaId === '1'){
+export function ItemsGrid({ data, areaId = '1' }: ItemsGridProps) {
+	if (areaId === '1') {
 		const photo = data.results as IResultOfSearchPhoto[];
-		const photos = photo.map((el, index)=>{
+		const photos = photo.map((el, index) => {
 			return {
 				src: el.urls.small,
 				height: el.height,
@@ -25,12 +24,10 @@ export function ItemsGrid ({ data, areaId = '1'}: ItemsGridProps) {
 				index: index
 			};
 		});
-		return (
-			<Album photos={photos} />
-		);
+		return <Album photos={photos} />;
 	}
 	const photo = data.results as IResultOfSearchCollection[];
-	const photos: ICollectionData[] = photo.map(({cover_photo, ...el})=>{
+	const photos: ICollectionData[] = photo.map(({ cover_photo, ...el }) => {
 		return {
 			collectionInfo: {
 				collectionId: el.id,
@@ -41,8 +38,7 @@ export function ItemsGrid ({ data, areaId = '1'}: ItemsGridProps) {
 			height: cover_photo.height,
 			width: cover_photo.width,
 			src: cover_photo.urls.small
-		};});
-	return (
-		<CollectionList collectionData={photos}/>
-	);
+		};
+	});
+	return <CollectionList collectionData={photos} />;
 }

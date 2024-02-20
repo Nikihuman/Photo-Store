@@ -1,41 +1,45 @@
 {
-  "name": "image-store",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "start": "",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@reduxjs/toolkit": "^2.1.0",
-    "axios": "^1.6.7",
-    "blurhash": "^2.0.5",
-    "classnames": "^2.5.1",
-    "react": "^18.2.0",
-    "react-blurhash": "^0.3.0",
-    "react-dom": "^18.2.0",
-    "react-hook-form": "^7.49.3",
-    "react-photo-album": "^2.3.1",
-    "react-redux": "^9.1.0",
-    "react-router-dom": "^6.21.3",
-    "yet-another-react-lightbox": "^3.17.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.2.43",
-    "@types/react-dom": "^18.2.17",
-    "@typescript-eslint/eslint-plugin": "^6.14.0",
-    "@typescript-eslint/parser": "^6.14.0",
-    "@vitejs/plugin-react-swc": "^3.5.0",
-    "eslint": "^8.55.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.5",
-    "sass": "^1.70.0",
-    "typescript": "^5.2.2",
-    "vite": "^5.0.8",
-    "vite-plugin-svgr": "^4.2.0"
-  }
+   "name": "image-store",
+   "private": true,
+   "version": "0.0.0",
+   "type": "module",
+   "scripts": {
+      "dev": "vite",
+      "build": "tsc && vite build",
+      "start": "",
+      "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+      "preview": "vite preview"
+   },
+   "dependencies": {
+      "@reduxjs/toolkit": "^2.1.0",
+      "axios": "^1.6.7",
+      "classnames": "^2.5.1",
+      "react": "^18.2.0",
+      "react-blurhash": "^0.3.0",
+      "react-dom": "^18.2.0",
+      "react-hook-form": "^7.49.3",
+      "react-photo-album": "^2.3.1",
+      "react-redux": "^9.1.0",
+      "react-router-dom": "^6.21.3",
+      "yet-another-react-lightbox": "^3.17.0"
+   },
+   "devDependencies": {
+      "@types/react": "^18.2.43",
+      "@types/react-dom": "^18.2.17",
+      "@typescript-eslint/eslint-plugin": "^6.14.0",
+      "@typescript-eslint/parser": "^6.14.0",
+      "@vitejs/plugin-react-swc": "^3.5.0",
+      "eslint": "^8.55.0",
+      "eslint-plugin-react-hooks": "^4.6.0",
+      "eslint-plugin-react-refresh": "^0.4.5",
+      "prettier": "3.2.5",
+      "sass": "^1.70.0",
+      "stylelint": "^16.2.1",
+      "stylelint-config-rational-order": "^0.0.4",
+      "stylelint-config-standard-scss": "^13.0.0",
+      "stylelint-order": "^6.0.4",
+      "typescript": "^5.2.2",
+      "vite": "^5.0.8",
+      "vite-plugin-svgr": "^4.2.0"
+   }
 }

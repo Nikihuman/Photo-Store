@@ -4,19 +4,15 @@ import { RootState, useAppDispatch } from '../../store/store';
 import { useLayoutEffect } from 'react';
 import { userActions } from '../../store/user.slice';
 
-export function RequestUserInfo ({children}: IRequestUserInfo){
-	const jwt = useSelector(({user}: RootState)=> user.jwt);
+export function RequestUserInfo({ children }: IRequestUserInfo) {
+	const jwt = useSelector(({ user }: RootState) => user.jwt);
 	const dispatch = useAppDispatch();
 
-	useLayoutEffect(()=>{
-		if(jwt){
+	useLayoutEffect(() => {
+		if (jwt) {
 			dispatch(userActions.getUserInfo());
 		}
-	},[jwt, dispatch]);
+	}, [jwt, dispatch]);
 
-	return(
-		<>
-			{children}
-		</>
-	);
+	return <>{children}</>;
 }

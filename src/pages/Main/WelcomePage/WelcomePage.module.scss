@@ -1,15 +1,17 @@
-@import '../../../common.module.scss';
+@import '../../../common.module';
 
-.welcome_page{
-	h1{
-		@include montserratFont(var(--text-primary-color), 3em)
-	}
-	div{
-		p{
-			@include rubicFont(var(--text-primary-color), 1em)
-		}
-	}
+.welcome_page {
+   h1 {
+      @include montserratFont(var(--text-primary-color), 3em);
+   }
+
+   div {
+      p {
+         @include rubicFont(var(--text-primary-color), 1em);
+      }
+   }
 }
-.title{
-	@include montserratFont(var(--backlight), 2em)
+
+.title {
+   @include montserratFont(var(--backlight), 2em);
 }

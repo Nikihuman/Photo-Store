@@ -1,28 +1,32 @@
-@import '../../common.module.scss';
+@import '../../common.module';
 
-.footer{
-	padding: 1rem;
-	@include secondary-border();
-	background-color: var(--transparent-primary-color);
-	margin: 0 auto;
-	display: flex;
-	gap: 15px;
-	@include montserratFont(var(--text-primary-color), 1.5em);
-	justify-content: center;
-	align-items: center;
-	width: min-content;
+.footer {
+   display: flex;
+   gap: 15px;
+   align-items: center;
+   justify-content: center;
+   width: min-content;
+   margin: 0 auto;
+   padding: 1rem;
+   background-color: var(--transparent-primary-color);
 
-	button:hover {
-		.icon * {
-			fill: var(--text-primary-color);
-			stroke: var(--text-primary-color);
-		}
-	}
+   @include secondary-border;
+   @include montserratFont(var(--text-primary-color), 1.5em);
+
+   button:hover {
+      .icon * {
+         fill: var(--text-primary-color);
+         stroke: var(--text-primary-color);
+      }
+   }
 }
+
 .triangle_icon_left {
-	transform: rotate(270deg);
+   transform: rotate(270deg);
 }
 
 .icon * {
-	transition: fill 0.3s, stroke 0.3s;
+   transition:
+      fill 0.3s,
+      stroke 0.3s;
 }

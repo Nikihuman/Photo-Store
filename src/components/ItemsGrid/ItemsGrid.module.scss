@@ -1,26 +1,28 @@
-@import '../../common.module.scss';
-
+@import '../../common.module';
 
 .items_grid {
-	// display: grid;
-	// grid-template-columns: auto auto auto;
-	// gap: 15px;
-	// margin: 30px 0;
-	display: flex;
-	gap: 15px;
+   // display: grid;
+   // grid-template-columns: auto auto auto;
+   // gap: 15px;
+   // margin: 30px 0;
+   display: flex;
+   gap: 15px;
 }
-.list {
-	display: flex;
-	flex-direction: column;
-	gap: 30px;
-}
-.image{
-		@include primary-border;
-		border-radius: 0.9em;
-		box-shadow: 0px 0px 10px #ffff;
-	}
 
-.collection_image{
-	border-top-right-radius: 0.9em;
-	border-top-left-radius: 0.9em;
+.list {
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+
+.image {
+   @include primary-border;
+
+   border-radius: 0.9em;
+   box-shadow: 0 0 10px #ffff;
+}
+
+.collection_image {
+   border-top-left-radius: 0.9em;
+   border-top-right-radius: 0.9em;
 }

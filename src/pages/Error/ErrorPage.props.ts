@@ -1,3 +1,3 @@
 export interface ErrorPageProps {
-	message?: string
+   message?: string;
 }

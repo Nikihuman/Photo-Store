@@ -1,51 +1,50 @@
-@mixin rubicFont ($color, $font-size, $font-weight: 400) {
-	font-family: 'Rubic', sans-serif;
-	font-size: $font-size;
-	color: $color;
-	font-weight: $font-weight;
+@mixin rubicFont($color, $font-size, $font-weight: 400) {
+   color: $color;
+   font-weight: $font-weight;
+   font-size: $font-size;
+   font-family: Rubic, sans-serif;
 }
 
-@mixin montserratFont ($color, $font-size, $font-weight: 600) {
-	font-family: 'Montserrat', sans-serif;
-	font-size: $font-size;
-	color: $color;
-	font-weight: $font-weight;
+@mixin montserratFont($color, $font-size, $font-weight: 600) {
+   color: $color;
+   font-weight: $font-weight;
+   font-size: $font-size;
+   font-family: Montserrat, sans-serif;
 }
 
-@mixin primary-border () {
-	border: 2.5px solid var(--border-primary-color);
-	border-radius: 1rem;
+@mixin primary-border() {
+   border: 2.5px solid var(--border-primary-color);
+   border-radius: 1rem;
 }
 
-@mixin secondary-border () {
-	border: 2.5px solid var(--border-secondary-color);
-	border-radius: 1rem;
+@mixin secondary-border() {
+   border: 2.5px solid var(--border-secondary-color);
+   border-radius: 1rem;
 }
 
-@mixin box-shadow(){
-	box-shadow: 0 0 10px var(--backlight);
+@mixin box-shadow() {
+   box-shadow: 0 0 10px var(--backlight);
 }
 
-@mixin error-text(){
-	background: var(--error-background-gradient);
-	background-size: 400%;
-	-webkit-background-clip: text;
-	background-clip: text;
-	-webkit-text-fill-color: transparent;
-	animation: gradient-text 1s linear infinite;
-	font-weight: 600;
+@mixin error-text() {
+   font-weight: 600;
+   background: var(--error-background-gradient);
+   background-size: 400%;
+   background-clip: text;
+   animation: gradient-text 1s linear infinite;
+   -webkit-text-fill-color: transparent;
 }
 
 @keyframes gradient-text {
-	25% {
-		background-position: 0 50%;
-	}
+   25% {
+      background-position: 0 50%;
+   }
 
-	50% {
-		background-position: 100% 50%;
-	}
+   50% {
+      background-position: 100% 50%;
+   }
 
-	100% {
-		background-position: 0 50%;
-	}
+   100% {
+      background-position: 0 50%;
+   }
 }

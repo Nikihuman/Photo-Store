@@ -6,13 +6,13 @@ import { Footer } from '../../../components/Footer/Footer';
 import { ICollectionPhotos } from '../../../helpers/get-collection-photos.interface';
 import { Album } from '../../../components/Album/Album';
 
-export function CollectionPhotos () {
-	const {data, total} = useLoaderData() as {data: ICollectionPhotos[], total: string};
-	const {page} = useParams<{page: string}>();
-	const {pathname} = useLocation();
+export function CollectionPhotos() {
+	const { data, total } = useLoaderData() as { data: ICollectionPhotos[]; total: string };
+	const { page } = useParams<{ page: string }>();
+	const { pathname } = useLocation();
 	const ref = useRef<HTMLDivElement>(null);
-	const photos = useMemo(()=>{
-		return data.map((el, index)=>{
+	const photos = useMemo(() => {
+		return data.map((el, index) => {
 			return {
 				src: el.urls.small,
 				height: el.height,
@@ -26,19 +26,19 @@ export function CollectionPhotos () {
 				index: index
 			};
 		});
-	},[data]);
+	}, [data]);
 
-	setTimeout(()=>{
-		ref.current ? window.scrollTo({top: 0, left:0, behavior: 'smooth'}): null;
-	},500);
-	
-	return(
+	setTimeout(() => {
+		ref.current ? window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }) : null;
+	}, 500);
+
+	return (
 		<div ref={ref} className={cn(styles.body_wrapper)}>
 			<div className={cn(styles.body)}>
-				<Album photos={photos}/>
+				<Album photos={photos} />
 			</div>
-			<Footer 
-				addition_to_the_route='page/'
+			<Footer
+				addition_to_the_route="page/"
 				pathname={pathname}
 				find_page_number_regexp={/page\/\d+/}
 				total={total}

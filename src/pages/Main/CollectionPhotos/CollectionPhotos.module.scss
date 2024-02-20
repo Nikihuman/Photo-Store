@@ -1,12 +1,9 @@
-@import '../../../common.module.scss';
-.body_wrapper{
-	position: relative;
-	.body{
-		margin: 2rem 0;
-	}
+@import '../../../common.module';
+
+.body_wrapper {
+   position: relative;
+
+   .body {
+      margin: 2rem 0;
+   }
 }
-
-
-
-
-

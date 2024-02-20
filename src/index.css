@@ -1,30 +1,28 @@
 :root {
-  --backlight: #03e9f4;
-  --error-background-gradient: linear-gradient(86deg, rgb(246, 189, 181) 0%, rgb(255, 38, 0) 61%);
-  --border-primary-color: rgba(0, 0, 0, 0.564);
-  --border-secondary-color: #5C5F65;
-  --transparent-primary-color: rgba(135, 135, 135, 0.721);
-  --primary-color: #2D2F39;
-  --text-primary-color: #d0cfcf;
-  --text-secondary-color: #00000088;
+   --backlight: #03e9f4;
+   --error-background-gradient: linear-gradient(86deg, rgb(246, 189, 181) 0%, rgb(255, 38, 0) 61%);
+   --border-primary-color: rgba(0, 0, 0, 0.564);
+   --border-secondary-color: #5c5f65;
+   --transparent-primary-color: rgba(135, 135, 135, 0.721);
+   --primary-color: #2d2f39;
+   --text-primary-color: #d0cfcf;
+   --text-secondary-color: #00000088;
 }
-
 
 body {
-  margin: 0;
+   margin: 0;
 }
 ::-webkit-scrollbar {
-  width: 1.1rem;
+   width: 1.1rem;
 }
 ::-webkit-scrollbar-track {
-  background: var(--transparent-primary-color)
+   background: var(--transparent-primary-color);
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border: 2px solid var(--border-primary-color);
-  border-radius: 10px;
+   background-color: #888;
+   border: 2px solid var(--border-primary-color);
+   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
+   background-color: #555;
 }
-

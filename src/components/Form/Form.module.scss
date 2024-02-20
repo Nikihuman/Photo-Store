@@ -1,24 +1,31 @@
-@import '../../common.module.scss';
+@import '../../common.module';
 
-.form{
-	width: 400px;
-	padding: 1em;
-	background-color: var(--transparent-primary-color);
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-	height: 100%;
-	box-sizing: border-box;
-	@include secondary-border;
-	border: none;
-	@include montserratFont(var(--text-primary-color), 1rem);
-	@media screen and (max-width: 720px) {
-		background: linear-gradient(0deg,rgba(104, 35, 56, 0.00) 1%, var(--transparent-primary-color) 99.64%);
-		width: 350px;
-		border-top-right-radius: 0px;
-		border-top-left-radius: 0px;
-		h1 {
-			margin: 0 0 0.5em 0.5em;
-		}
-	}
+.form {
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+   box-sizing: border-box;
+   width: 400px;
+   height: 100%;
+   padding: 1em;
+   background-color: var(--transparent-primary-color);
+   border: none;
+
+   @include secondary-border;
+   @include montserratFont(var(--text-primary-color), 1rem);
+
+   @media screen and (width <= 720px) {
+      width: 350px;
+      background: linear-gradient(
+         0deg,
+         rgb(104 35 56 / 0%) 1%,
+         var(--transparent-primary-color) 99.64%
+      );
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+
+      h1 {
+         margin: 0 0 0.5em 0.5em;
+      }
+   }
 }

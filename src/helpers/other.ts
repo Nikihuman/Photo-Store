@@ -1,9 +1,9 @@
-export type Nullable <T> = null | T;
+export type Nullable<T> = null | T;
 
 export interface IPasswordVisibility {
-	type: 'password'| 'text',
+   type: 'password' | 'text';
 }
 
 export interface ISearchErrors {
-	query?: string
+   query?: string;
 }

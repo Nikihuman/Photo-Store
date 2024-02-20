@@ -20,47 +20,51 @@ import { ErrorPage } from './pages/Error/ErrorPage.tsx';
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <RequestUserInfo><Main/></RequestUserInfo>,
-		children:[
+		element: (
+			<RequestUserInfo>
+				<Main />
+			</RequestUserInfo>
+		),
+		children: [
 			{
 				path: '/search/:query/area/:areaId/page/:page',
-				element: <SearchResult/>,
+				element: <SearchResult />,
 				loader: searchLoader,
-				errorElement: <ErrorPage message="Failed to load resurs for Search result"/>
+				errorElement: <ErrorPage message="Failed to load resurs for Search result" />
 			},
 			{
 				path: '/collectionId/:id/page/:page',
-				element: <CollectionPhotos/>,
+				element: <CollectionPhotos />,
 				loader: getCollectionPhotosLoader,
-				errorElement: <ErrorPage message="Failed to load resurs for Collection's photos"/>
+				errorElement: <ErrorPage message="Failed to load resurs for Collection's photos" />
 			},
 			{
 				path: '/favorite',
-				element: <FavoriteList/>
+				element: <FavoriteList />
 			},
 			{
 				path: '/',
-				element: <WelcomePage/>
+				element: <WelcomePage />
 			}
 		]
 	},
 	{
 		path: '/auth',
-		element: <AuthLayout/>,
+		element: <AuthLayout />,
 		children: [
 			{
 				path: 'login',
-				element: <LoginForm/>
+				element: <LoginForm />
 			},
 			{
 				path: 'register',
-				element: <RegisterForm/>
+				element: <RegisterForm />
 			}
 		]
 	},
 	{
 		path: '*',
-		element: <ErrorPage/>
+		element: <ErrorPage />
 	}
 ]);
 
@@ -68,7 +72,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 	<React.StrictMode>
 		<Provider store={store}>
 			<Background>
-				<RouterProvider router={router}/>
+				<RouterProvider router={router} />
 			</Background>
 		</Provider>
 	</React.StrictMode>

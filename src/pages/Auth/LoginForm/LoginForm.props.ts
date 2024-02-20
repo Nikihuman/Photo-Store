@@ -1,5 +1,3 @@
 import { FormHTMLAttributes } from 'react';
 
-export interface LoginFormProps extends FormHTMLAttributes<HTMLFormElement> {
-
-}
+export interface LoginFormProps extends FormHTMLAttributes<HTMLFormElement> {}
